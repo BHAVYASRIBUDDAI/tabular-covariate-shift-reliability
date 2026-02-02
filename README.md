@@ -97,16 +97,15 @@ Quantifies the difference between predicted confidence and empirical accuracy by
 
 Reliability Diagrams
 Visualize calibration by comparing predicted confidence against observed accuracy across bins. Deviations from the diagonal indicate miscalibration.
-## Features and Techniques
 
-- **Baseline models**: Logistic Regression and Random Forest
-- **Covariate shift detection**: Train a classifier to quantify distribution shift
-- **Mitigation strategies**:
-  - Importance weighting during training
-  - Post-hoc calibration using temperature scaling
-- **Evaluation**:
-  - Accuracy and F1-score under shifted test sets
-  - Expected Calibration Error (ECE) and reliability diagrams
+
+CONCLUSION:
+This project examined the impact of covariate shift on both predictive performance and model reliability in tabular machine learning models. Through controlled experiments, we demonstrated that distribution shift can significantly degrade model calibration, often more severely than classification accuracy.
+
+Our findings highlight that models may remain seemingly accurate while producing unreliable and overconfident predictions, posing risks in real-world deployment. Importance-weighted training and post-hoc calibration techniques were shown to partially mitigate these effects, though neither fully restores performance to i.i.d. conditions.
+
+These results emphasize the importance of evaluating machine learning systems beyond accuracy, particularly in settings where confidence estimates inform downstream decisions.
+
 
 ---
 ##Install Dependencies
