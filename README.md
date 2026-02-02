@@ -99,7 +99,7 @@ Quantifies the difference between predicted confidence and empirical accuracy by
 Reliability Diagrams
 Visualize calibration by comparing predicted confidence against observed accuracy across bins. Deviations from the diagonal indicate miscalibration.
 
-## RESULTS
+**## RESULTS**:
 We evaluate classical machine learning models under covariate shift using both performance and calibration metrics.
 Covariate shift detection achieves an AUC of **1.0**, indicating that the shifted and non-shifted distributions are perfectly separable in this setting.
 Under distribution shift, unweighted Logistic Regression exhibits poor calibration with an Expected Calibration Error (ECE) of **0.145**, despite reasonable predictive performance. Random Forest models demonstrate substantially better calibration, achieving an ECE of **0.037**.
@@ -109,7 +109,7 @@ Strong regularization alone does not improve calibration, with the strongly regu
 Post-hoc temperature scaling further improves calibration. With a learned temperature of **0.973**, the calibrated model achieves a final ECE of **0.031**, demonstrating that simple calibration techniques can substantially improve reliability under covariate shift without increasing model complexity.
 
 
-## KEY OBSERVATIONS:
+**## KEY OBSERVATIONS**:
 - Covariate shift can be reliably detected, yet its impact on model reliability is often underestimated.
 - Calibration degrades more severely than accuracy under distribution shift, indicating that confidence estimates are especially vulnerable.
 - Tree-based models are inherently more robust to calibration errors under shift compared to linear models.
